@@ -16,7 +16,7 @@ public class Komputer {
     }
 
     public void tampil() {
-        System.out.println("Data Komputer :");
+        System.out.println("---------------------------------- Data Komputer ----------------------------------");
         System.out.println("Merk: " + merk);
         System.out.println("Kecepatan Prosesor: " + kecProsesor);
         System.out.println("Ukuran Memory: " + sizeMemory);

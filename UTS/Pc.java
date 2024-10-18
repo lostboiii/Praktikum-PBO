@@ -14,7 +14,7 @@ public class Pc extends Komputer {
 
 
     public void tampilPc() {
-        System.out.println("Data PC :");
+        System.out.println("---------------------------------- Data PC ----------------------------------");
         super.tampil();
         System.out.println("Ukuran Monitor: " + ukuranMonitor + " inch");
     }

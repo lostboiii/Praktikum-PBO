@@ -11,7 +11,7 @@ public class Windows extends Leptop {
     }
 
     public void tampilWindows() {
-        System.out.println("Data Windows :");
+        System.out.println("---------------------------------- Data Windows ----------------------------------");
         super.tampilLeptop();
         System.out.println("Fitur: " + fitur);
     }

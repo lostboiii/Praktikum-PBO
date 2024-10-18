@@ -11,7 +11,7 @@ public class Leptop extends Komputer {
 
     }
     public void tampilLeptop() {
-        System.out.println("Data Leptop :");
+        System.out.println("---------------------------------- Data Leptop ----------------------------------");
         super.tampil();
         System.out.println("Jenis Batrei: " + jnsBatrei);
     }

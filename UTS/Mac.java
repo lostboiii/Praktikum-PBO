@@ -12,7 +12,7 @@ public class Mac extends Leptop {
     }
 
     public void tampilMac() {
-        System.out.println("Data Mac :");
+        System.out.println("---------------------------------- Data Mac ----------------------------------");
         super.tampilLeptop();
         System.out.println("Security: " + security);
     }
