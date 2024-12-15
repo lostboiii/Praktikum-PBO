@@ -22,6 +22,11 @@ public class Kategori {
         this.nama = nama;
         this.keterangan = keterangan;
     }
+    
+     public String toString(){
+        return nama;
+    }
+
 
     public void setIdkategori(int idkategori) {
         this.idkategori = idkategori;

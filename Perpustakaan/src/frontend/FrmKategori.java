@@ -148,11 +148,11 @@ public class FrmKategori extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tblKategori);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("idkategori");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("nama");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("keterangan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,17 +177,16 @@ public class FrmKategori extends javax.swing.JFrame {
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel3))))
                         .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtIdKategori)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(btnHapus)
-                                .addGap(47, 47, 47)
-                                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCari))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtIdKategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNama)
+                            .addComponent(txtKeterangan))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCari)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -233,17 +232,18 @@ public class FrmKategori extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
-        Kategori kat = new Kategori();
-        kat.setIdkategori(Integer.parseInt(txtIdKategori.getText()));
-        kat.setNama(txtNama.getText());
-        kat.setKeterangan(txtKeterangan.getText());
-        kat.save();
-        txtIdKategori.setText(Integer.toString(kat.getIdkategori()));
-        tampilData();
+         Kategori kat = new Kategori();
+    kat.setNama(txtNama.getText());
+    kat.setKeterangan(txtKeterangan.getText());
+    kat.save(); // This should now set the idKategori automatically
+    txtIdKategori.setText(Integer.toString(kat.getIdkategori())); // Display the new ID
+    tampilData();
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnTambahBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahBaruActionPerformed
         kosongkanForm();
+        txtIdKategori.setText("");
+        
     }//GEN-LAST:event_btnTambahBaruActionPerformed
 
     private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
